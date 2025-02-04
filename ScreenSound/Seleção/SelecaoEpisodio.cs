@@ -4,40 +4,39 @@ using System.Diagnostics.SymbolStore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ScreenSound.Seleção.Adicionar;
+namespace ScreenSound.Seleção;
 
-namespace ScreenSound.Seleção
+internal class SelecaoEpisodio
 {
-    internal class SelecaoEpisodio
+    internal static void SelecaoEpisodiovoid()
     {
-        internal static void SelecaoEpisodiovoid()
+        bool loop = true;
+        while (loop)
         {
-           bool loop = true;
-            while (loop)
+            Console.Clear();
+
+            Console.WriteLine("escollhe ai 1(adiciona) e 2(amostra)");
+            var resposta = Console.ReadLine();
+            if (int.TryParse(resposta, out int repostaint))
             {
-                Console.Clear();
-
-                Console.WriteLine("escollhe ai 1(adiciona) e 2(amostra)");
-                var resposta = Console.ReadLine();
-                if (int.TryParse(resposta, out int repostaint))
+                switch (repostaint)
                 {
-                    var asdasd = new Episodio("flow", "ep do davijones", 12);
-                    asdasd.adicionarConvidado("davijones");
-                    var asdasd22 = new Episodio("flow", "ep do davijones", 12);
-                    asdasd22.adicionarConvidado("davijones");
+                    case 1:
 
-                    var sdfghjklç = new Podcast("podcast super legal asdfghjklç", "mago davijones");
-                    sdfghjklç.AdicionarEpisodio(asdasd);
-                    sdfghjklç.AdicionarEpisodio(asdasd22);
-                    sdfghjklç.exbirEps();
-                    sdfghjklç.exibirPodcast();
-                    loop = false;
-                }
-                else
-                {
-                    Console.WriteLine("escolha inválida");
+                        break;
+                    case 2:
+                        Console.WriteLine("escolheu 2");
+                        break;
                 }
 
+                loop = false;
             }
+            else
+            {
+                Console.WriteLine("escolha inválida");
+            }
+
         }
     }
 }

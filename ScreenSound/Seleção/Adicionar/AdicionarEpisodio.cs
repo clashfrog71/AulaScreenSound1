@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ScreenSound.Seleção.Adicionar
+namespace ScreenSound.Seleção.Adicionar;
+
+internal class AdicionarEpisodio
 {
-    internal class AdicionarEpisodio
-    {
-    }
 }
