@@ -1,6 +1,6 @@
 ﻿namespace ScreenSound
 {
-    class Episodio
+    internal class Episodio
     {
         private List<string> convidados = new();
         public Episodio(string host, string nomedoep, int duracao)

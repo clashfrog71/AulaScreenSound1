@@ -1,14 +1,16 @@
 ﻿using ScreenSound;
 namespace ScreenSoundPrincipal;
+using ScreenSound.Seleção;
 class Aplicaçãoprincipal
 {
     public static void Main()
     {
         int numerolimite = 2;
         Console.WriteLine("Aplicação para adicionar e excluir artistas e exibir podcasts, e adicionar tbm me esqueci de falar");
+        Console.WriteLine("escolha entre 1:(Artistas) e 2:(Podcast)");
         Console.WriteLine($"esolha ai entre 1 e {numerolimite}");
         var resposta = Console.ReadLine();
-        
+
 
         if (int.TryParse(resposta, out int respostaInt))
         {
@@ -25,20 +27,11 @@ class Aplicaçãoprincipal
                         Console.WriteLine("escolheu 1");
                         break;
                     case 2:
-                        Console.WriteLine("escolheu 2");
+                        SelecaoEpisodio.SelecaoEpisodiovoid();
                         break;
                 }
 
-                var asdasd = new Episodio("flow", "ep do davijones", 12);
-                asdasd.adicionarConvidado("davijones");
-                var asdasd22 = new Episodio("flow", "ep do davijones", 12);
-                asdasd22.adicionarConvidado("davijones");
 
-                var sdfghjklç = new Podcast("podcast super legal asdfghjklç", "mago davijones");
-                sdfghjklç.AdicionarEpisodio(asdasd);
-                sdfghjklç.AdicionarEpisodio(asdasd22);
-                sdfghjklç.exbirEps();
-                sdfghjklç.exibirPodcast();
             }
         }
         else

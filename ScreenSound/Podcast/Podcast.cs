@@ -1,6 +1,6 @@
 ﻿namespace ScreenSound;
 
-class Podcast
+internal class Podcast
 {
     private List<Episodio> episodios = new();
     public string Nome { get; }
